@@ -1,1 +1,225 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    body{
+            padding: 0;
+	    	margin: 0; 
+	    	background:  #f8f8f8;
+	    }
+	    *{
+	    	list-style: none;
+	    	font-family: Arial, 'Nova Flat', cursive;
+	    }
+	    .wrapper{
+	    	max-width: 900px;
+	    	margin: 0 auto;
+	    	box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 12px 0 rgba(0, 0, 0, 0.19);
+	    	padding: 20px 70px;
+	    	background:  white;
+
+	}
+		img{
+			float: left;
+			display: block;
+			margin: 60px 20px; 
+			border-radius: 50%;
+
+		}
+		.name{
+			display: inline-block;
+			margin-top: 60px;
+			margin-left: 60px;
+		}
+		.name>h2{
+			font-size: 16px;
+		}
+		h1{
+			 margin-bottom: 0;
+		}
+		.contacts{
+			width: 250px;
+			float: right;
+			margin-top: 50px; 
+		}
+		.contacts p:nth-child(1){
+			padding-bottom: 5px; 
+			font-weight: bold;
+			border-bottom: 2px solid black;
+		}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.exp{
+			margin-top: 80px;
+		}
+		.exp h3,
+		.edu h3{ 
+			padding-bottom: 10px; 
+			width: 40%;
+			border-bottom: 1px solid gray;
+		}
+		.exp ul,
+		.edu ul{
+			padding-left: 0;
+			position: relative;
+            border-left: 1px solid gray;
+            margin-top: 40px;
+		}
+		li{
+			padding-left: 80px;
+		}
+        .exp li::before,
+        .edu li::before{
+        	content: "";
+        	display: inline-block;
+        	width: 10px;
+        	height: 10px;
+        	background: black; 
+        	border-radius: 50%;
+        	position: absolute;
+        	left: -5px;
+        }
+        .edu{
+			margin-top: 40px;
+		}
+		.emphasis{
+			font-weight: bold;
+			font-size: 16px;
+		}
+	    .time{
+	    	color: gray;
+	    }
+	    .footer ul{
+	    	position: relative;
+	    	padding-left: 0;
+
+	    }
+	    .hobby{
+	    	float: left;
+	    	width: 50%;
+	    	margin: 0;
+	    }
+        .skills{
+        	float: right;
+        	width: 45%;
+        	margin: 0;
+        }
+        .footer li:before{
+        	content: "+";
+        	display: inline-block;
+            width: 16px;
+        	height: 16px;
+        	border: 1px solid black;
+        	border-radius: 50%;
+        	text-align: center;
+        }
+         .hobby li:before{
+        	position: absolute;
+        	left: -9px;
+        }
+        .skills li:before{
+        	position: relative;
+        	left: -30px;
+        }
+        .skills li{
+        	width: 130px;
+        	height: 20px;
+        	float: left;
+        	padding-left: 0;
+        	margin: 20px 30px; 
+        }
+        .footer h3{ 
+			padding-bottom: 10px; 
+			width: 100%;
+			border-bottom: 1px solid gray;
+		}
+	</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header clearfix">
+	  <img src="https://ooo.0o0.ooo/2017/07/01/5957299554c26.jpg" width="120px" height="120px" alt="照片">
+	  <div class="contacts">
+	    <p>联系方式</p>
+	    <p><span>家乡:</span> 江苏省XXXXX</p>
+	    <p><span>联系电话:</span> 18662005256</p>
+	    <p><span>邮箱地址:</span> 390532099@qq.com</p>
+	  </div>
+	<div class="name">
+	  <h1>陈尚烁</h1>
+	  <h2>前端开发工程师</h2>
+	</div>
+	<div class="exp">
+      <h3>工作经历</h3>
+      <ul>
+        <li>
+          <span class="emphasis">XXX公司/</span>
+          <span class="time">2008-2011</span>
+          <p>工作经验或者实习经历一般来说是简历的重点内容，如果已有的工作实习经历与应聘的职位或者公司业务需求相关的话，那通过简历筛选的几率很大。因为相关的工作 </p>
+        </li>
+        <li>
+          <span class="emphasis">XXX公司/</span>
+          <span class="time">2008-2011</span>
+          <p>工作经验或者实习经历一般来说是简历的重点内容，如果已有的工作实习经历与应聘的职位或者公司业务需求相关的话，那通过简历筛选的几率很大。因为相关的工作 </p>
+        </li>
+        <li>
+          <span class="emphasis">XXX公司/</span>
+          <span class="time">2008-2011</span>
+          <p>工作经验或者实习经历一般来说是简历的重点内容，如果已有的工作实习经历与应聘的职位或者公司业务需求相关的话，那通过简历筛选的几率很大。因为相关的工作 </p>
+        </li>
+      </ul>
+    </div>
+    <div class="edu">
+      <h3>教育经历</h3>
+      <ul>
+      	<li>
+      	  <span class="emphasis">江苏省射阳中学/</span>
+      	  <span class="time">2008-2011</span>
+      	  <p>一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述</p>
+      	</li>
+      	<li>
+      	  <span class="emphasis">南京工业大学/</span>
+      	  <span class="time">2011-2015</span>
+      	  <p>一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述</p>
+      	</li>
+      </ul>
+    </div>
+	<div class="footer  clearfix">
+	  <div class="hobby">
+	    <h3>兴趣爱好</h3>
+	    <ul>
+	      <li>
+	        <span class="emphasis">篮球</span>
+	        <p>热爱运动，热爱篮球！</p>
+	      </li>
+	      <li>
+	      	<span class="emphasis">骑行</span>
+	        <p>千里之行，始于车轮，大学期间，多次组织同学进行周边骑行，大四暑假，骑行青海湖。</p>
+	      </li>
+	      <li>
+	      	<span class="emphasis">读书</span>
+	        <p>喜欢汪曾祺先生的散文和东野圭吾的悬疑小说</p>
+	      </li>
+	    </ul>
+	  </div>
+	  <div class="skills clearfix">
+	    <h3>个人技能</h3>
+	    <ul>
+	      <li>HTML&CSS</li>
+	      <li>JQUERY</li>
+	      <li>JAVASCRIPT</li>
+	      <li>PHOTOSHOP</li>
+	      <li>SLIM</li>
+	      <li>ILLUSTRATOR</li>
+	    </ul>   
+	  </div>
+	</div>
+   </div>
+</body>
+</html>
