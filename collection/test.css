@@ -1,0 +1,55 @@
+*{
+  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+h1{
+  color:#87968e;
+  font-size:34px;
+}
+p{
+  color:#87968e;
+  font-size:14px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+body{
+  margin:0;
+  text-align:center;
+  background:#fff2e3;
+}
+
+li{
+  list-style:none;
+  display:inline-block;
+}
+.box a{
+  text-decoration: none;
+  display:block;
+  background:#72b890;
+  border-radius:3px;
+  margin:5px;
+  padding:4px 10px;
+}
+ul{
+  padding:0;
+}
+img{
+  margin-top:20px;
+  margin-bottom:30px;
+}
+.box a:link,
+.box a:visited{
+  color:white;
+}
+.box a:hover{
+  opacity: 0.6;
+}
+.box a:active{
+  color:white;
+}
+p a{
+   text-decoration: none;
+}
+p a:link,
+ a:visited{
+  color:#72b890;
+}
