@@ -1,0 +1,376 @@
+@font-face{
+  font-family: "xxx";  /* project id 342038 */
+  src: url('//at.alicdn.com/t/font_f8h95gxy2ry0hpvi.eot');
+  src: url('//at.alicdn.com/t/font_f8h95gxy2ry0hpvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_f8h95gxy2ry0hpvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_f8h95gxy2ry0hpvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_f8h95gxy2ry0hpvi.svg#iconfont') format('svg');
+}
+.icon{
+  font-family: "xxx" !important;
+  font-size:32px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+      margin: 0;
+      padding: 0;
+    }
+    *{
+      list-style: none;
+      text-decoration: none;
+      font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+      padding: 0;
+    }
+    #header{
+      width: 100%;
+      background: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg) no-repeat;
+      background-size: cover;
+    }
+    #nav{ 
+        width: 100%;
+      padding: 0;
+        background-color: #333;
+      position: fixed;
+      z-index: 2;
+    }
+    .box1{
+      color: #fed136;
+      font-size: 2em;
+      font-style: italic;
+        float:left;
+      margin-top: 20px;
+        margin-left:30px;
+    }
+    .box2{
+      float:right;
+    }
+    .box2>li{
+      float:left;
+      margin: 15px; 
+    }
+      a:link,
+      a:visited{
+        color: white;
+      }
+      a:hover,
+      a:active{
+        color: yellow;
+      }
+      section{
+        text-align: center;
+        padding: 300px 0;
+      }
+      section>h2{
+        font-size: 40px;
+        color: white;
+        font-style: italic;
+      }
+      #header section>h3{
+        font-size: 75px;
+        color: white;
+        text-transform: uppercase;
+        margin-top: 30px;
+        font-weight: bold;
+      }
+      #header button{
+        padding: 20px 40px;
+        background: #fed136;
+        border:none;
+        border-radius: 3px;
+        color: #fff;
+        text-transform: uppercase;
+        font: bold 18px/1 Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+      }
+      #same{
+        padding-top: 100px;
+        padding-bottom: 70px;
+      }
+      #same h3{
+        font: bold 40px/1.1  Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      }
+      #same>p{
+        font: italic 16px/1.1 "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #777;
+      }
+      .col-md-4{
+        width: 33.3%;
+        float: left;
+        text-align: center;
+      }
+      .col-md-4:after{
+        content:""
+      }
+      .col-md-4 h4{
+        font: bold 18px/1 Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        margin-bottom: 0;
+      }
+      .col-md-4::before{
+        content: "";
+        display: inline-block;
+        width: 112px;
+        height: 112px;
+        background: #fed136;
+        border-radius: 50%;
+        text-align: center;
+      }
+      .content{
+        padding: 80px 40px;
+      }
+      .content .icon{
+        position: relative;
+        top:-70px;
+      }
+      .content p{
+        font: 14px/1.75 "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 0 40px;
+        color: #777;
+        padding: 20px;
+      }
+      .clearfix::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+ 
+.portfolio{
+      background:#f7f7f7;
+}
+.img{
+  width: 360px;
+  height: 260px;
+  display: inline-block;
+  color: white;
+  line-height: 260px;
+  text-decoration: none;
+  font-size: 80px;
+  margin-bottom: 0;
+}
+.portfolio li{
+  background:#fff;
+  margin-bottom:20px;
+}
+li .first{ 
+  background: url("http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png");
+  background-size: 100% 100%; 
+}
+li .second{
+  background: url("http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/startup-framework.png");
+  background-size: 100% 100%;
+}
+li .third{
+  background: url("http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/treehouse.png");
+  background-size: 100% 100%;  
+}
+li .fourth{
+  background: url("http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/golden.png");
+  background-size: 100% 100%;  
+}
+li .fifth{
+  background: url("http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/escape.png");
+  background-size: 100% 100%;  
+}
+li .sixth{
+  background: url("http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/dreams.png");
+  background-size: 100% 100%;  
+}
+.portfolio>ul{
+  display: flex;
+  padding:100px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.portfolio>ul>li a:hover {
+  background: rgba(254,209,54,0.7);
+}
+
+.portfolio>ul>li a:hover:after{
+  content: '+';
+  display: inline-block;
+}     
+      .img h4{
+        font-size: 18px;
+        margin: 0;
+      }
+      .img p{
+        font: italic 16px/1 "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        margin-top: 0;
+      }
+
+      .about img{
+        width: 156px;
+        height: 156px;
+        border: 7px solid #f1f1f1;
+        border-radius: 50%;
+
+      }
+      .summary{
+        margin-top: 40px;
+      }
+      .about li{
+        position: relative;
+        padding: 0 0 125px 0;
+      }
+       .summary>li> .box{
+        position: absolute;
+        top: 0;
+        right: 50%;
+        margin-right: 120px;
+        width: 400px;
+        text-align: right;
+      }
+       .summary>li:nth-child(even)> .box{
+        left: 50%;
+        margin-left: 120px;
+        text-align: left;
+       }
+       .about li:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: 1px;
+        top: 0;
+        border-left: 2px solid #f1f1f1;
+        height: 100%;
+        z-index: -1;
+       }
+        .last-li::before{
+         content:"";
+         display:block;
+         width:156px;
+        height: 156px;
+        border: 7px solid #f1f1f1;
+        border-radius: 50%;               
+        background-color: #fed136;
+        position: absolute;
+        left: 50%;
+        margin-left:-85px;
+        top:0; 
+       }
+       .last-li>h4{
+        font-weight: bold;
+        font-size:18px;
+        line-height:1.2; 
+        color:#fff;
+        position: absolute;
+        left: 50%;
+        margin-left:-41px;
+        top:20px;
+        z-index:1 
+       } 
+        */
+    
+
+       .box h4{
+        font: bold 18px/1;
+       }
+       .box p{
+        font: 14px/1.75 "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #777;
+       }
+       .team{
+        background-color: #f7f7f7;
+       }
+       .team img{
+        width: 239px;
+        height: 239px;
+        border: 7px solid #fff;
+        border-radius: 50%; 
+       }
+       .photo{
+        display: flex;
+        justify-content:center;
+
+       }
+       .team li{
+        width: 360px;
+        padding: 15px;
+       }
+       .team a{ 
+        padding:5px;
+       }
+       .team a:link,
+       .footer a:link{
+        color: black;
+       }
+       .team a:visited,
+       .footer a:visited{
+        color: black;
+       }
+       .team a:hover,
+       .footer a:hover{
+        color: yellow;
+       }
+       .work{
+        padding: 40px 0; 
+       }
+       .work img{
+        padding: 15px 45px;
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+       }
+       .contact{
+        background: url(https://ooo.0o0.ooo/2017/07/02/595900131c6e5.jpg) no-repeat;
+      background-size: cover;
+
+       }
+       .contact h3{
+        color: #fff;
+       }
+       form{
+        padding: 20px 140px;
+        margin-top: 50px;
+        display: flex;
+        justify-content:center;
+
+       }
+       input,textarea{
+        border: none;
+       }
+       .contact .left{
+        margin-right: 20px;
+       }
+       .left input{
+        width: 500px;
+        height: 20px;
+        padding: 20px;
+        margin: 10px 0; 
+        border-radius: 4px;
+       }
+       .right{
+        margin-left: 20px;
+       }
+       .right textarea{
+        width: 500px;
+        height: 180px;
+        padding: 20px;
+        margin: 10px 0; 
+        border-radius: 4px;
+       }
+       button{
+        cursor:pointer;
+        padding: 20px 40px;
+        background-color: #fed136;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #fff;
+       }
+       .footer{
+         display:flex;
+         justify-content:space-around;
+         align-items: center; 
+         padding:10px;
+       }
+      
+
+
+
+
+
