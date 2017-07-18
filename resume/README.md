@@ -1,1 +1,1 @@
-[效果预览](https://chenshangshuo.github.io/works/)
+[效果预览](https://chenshangshuo.github.io/works/resume/test.html)
