@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  .model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99;
+    display: none;
+  }
+  .center{
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: #fff;
+    z-index: 100;
+  }
+  h4{
+    padding: 10px;
+    margin: 0;
+  }
+  .center .cancel{
+    font-size: 20px;
+    position: absolute;
+    top: 7px;
+    right: 15px;
+  }
+  .center .content{
+    border-top: 1px solid #ccc;
+    padding: 10px;
+  }
+  .center .footer{
+    float: right;
+    margin: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  .center .footer a{
+    margin: 5px;
+  }
+  .open{
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <button>点我</button>
+  <div class="add"></div>
+  <div class="model">
+    <div class="center">
+      <h4>我是标题1</h4>
+      <a class="cancel" href="#">x</a>
+      <div class="content">
+        <p>我是内容1</p>
+        <p>我是内容2</p>
+      </div>
+      <div class="footer">
+        <a href="#">取消</a>
+        <a href="#">确定</a>
+      </div>
+    </div>
+  </div>
+<script>
+  var button = document.querySelector('button')
+  var model = document.querySelector('.model')
+  var center = document.querySelector('.center')
+  var cancel = document.querySelector('.center .cancel')
+  button.addEventListener('click',function(){
+    model.classList.add('open')
+    center.classList.add('open')
+  })
+  cancel.addEventListener('click',function(){
+    model.classList.remove('open')
+    center.classList.remove('open')
+  })
+  model.addEventListener('click',function(){
+    model.classList.remove('open')
+    center.classList.remove('open')
+  })
+  center.addEventListener('click',function(e){
+    e.stopPropagation()
+  })
+</script>
+</body>
+</html>
