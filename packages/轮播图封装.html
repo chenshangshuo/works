@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>轮播图组件封装</title>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul,li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+    }
+    .carousel{
+      width: 1000px;
+      height: 460px;
+      overflow: hidden;
+      margin: 20px auto;
+      position: relative;
+    }
+    .carousel .imgs{
+      position: absolute;
+      font-size: 0;
+    }
+    .carousel .imgs li{
+      float: left;
+    }
+    .carousel .imgs img{
+      width: 1000px;
+      height: 460px;
+    }
+    .carousel>.arrow{
+      display: inline-block;
+      font-size: 40px;
+      line-height: 70px;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -35px;
+      z-index: 2;
+      width: 40px;
+      height: 70px;
+      background-color: #757575;
+      opacity: 0.1;
+    }
+    .carousel>.arrow:hover{
+      opacity: 1;
+    }
+    .carousel>.pre{
+      left: 0;
+    }
+    .carousel>.next{
+      right: 0;
+    }
+    .carousel>.bullets{
+      width: 200px;
+      position: absolute;
+      z-index: 2;
+      right: 20px;
+      bottom: 10px;
+    }
+    .carousel>.bullets>li{
+      display: inline-block;
+      margin: 0 10px;
+      width: 10px;
+      height: 10px;
+      background-color: #757575;
+      border: 1px solid #757575;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .carousel>.bullets>li.active{
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <ul class="imgs">
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_14987863027505_MhdnQ.jpg" alt=""></a></li>
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_15018483062023_FjWCX.jpg" alt=""></a></li>
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_15019224014542_gsEYU.jpg" alt=""></a></li>
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_14958834209224_inThg.jpg" alt=""></a></li>
+    </ul>
+    <a class="pre arrow" href="#"><span><</span></a>
+    <a class="next arrow" href="#"><span>></span></a>
+    <ul class="bullets">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="carousel">
+    <ul class="imgs">
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_14987863027505_MhdnQ.jpg" alt=""></a></li>
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_15018483062023_FjWCX.jpg" alt=""></a></li>
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_15019224014542_gsEYU.jpg" alt=""></a></li>
+      <li><a href=""><img src="https://i3.mifile.cn/a4/xmad_14958834209224_inThg.jpg" alt=""></a></li>
+    </ul>
+    <a class="pre arrow" href="#"><span><</span></a>
+    <a class="next arrow" href="#"><span>></span></a>
+    <ul class="bullets">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <script>
+
+    //1.构造函数
+    function Carousel($ct){
+      this.$ct = $ct
+      this.init()
+      this.bind()
+    }
+    //2.选择对象，初始化，对应子类众多，可用find()查找
+    Carousel.prototype = {
+      init: function(){
+        var $pre = this.$pre = this.$ct.find('.pre')
+        var $next = this.$next = this.$ct.find('.next')
+        var $imgCt = this.$imgCt = this.$ct.find('.imgs')
+        var $imgs = this.$imgs = this.$ct.find('.imgs>li')
+        var $bullets = this.$bullets = this.$ct.find('.bullets>li')
+        this.pageIndex = 0   //记录当前页
+        this.isAnimate = false //状态锁
+        this.imgsCount = $imgs.length
+        this.imgWidth = $imgs.width()
+
+        $imgCt.append($imgs.first().clone())  //良好的轮播体验必须前后插入图片，利用CSS过渡下
+        $imgCt.prepend($imgs.last().clone())
+        $imgCt.css({'width': this.imgWidth*(this.imgsCount+2)})
+        $imgCt.css({'left': -this.imgWidth})
+      },
+    //绑定事件
+      bind: function(){
+        var _this = this
+        this.$next.click(function(e){
+          e.preventDefault()
+          _this.playNext(1)
+        })
+
+        this.$pre.click(function(e){
+          e.preventDefault()
+          _this.playPre(1)
+        })
+
+        this.$bullets.click(function(){
+          var index = $(this).index()
+          if (index > _this.pageIndex) {
+            _this.playNext(index - _this.pageIndex)
+          }else if (index < _this.pageIndex) {
+            _this.playPre(_this.pageIndex-index)
+          }
+        })
+
+        setInterval(function(){_this.playNext(1)}, 4000)
+      },
+
+      playNext: function(len){
+        var _this = this
+        if (this.isAnimate) return  //isAnimate的用法，最后一个参数是执行选项后的函数
+        this.isAnimate = true
+        this.$imgCt.animate({
+          'left': '-=' + this.imgWidth*len
+        },function(){
+          _this.pageIndex += len
+          if (_this.pageIndex === _this.imgsCount) {
+            _this.$imgCt.css({'left': -_this.imgWidth})
+            _this.pageIndex = 0
+          }
+          _this.setBgcolor()
+          _this.isAnimate = false
+        })
+      },
+
+      playPre: function(len){
+        var _this = this
+        if (this.isAnimate) return
+        this.isAnimate = true
+        this.$imgCt.animate({
+          'left': '+=' + this.imgWidth*len
+        },function(){
+          _this.pageIndex -= len
+          if (_this.pageIndex === -1) {
+            _this.$imgCt.css({'left': -_this.imgWidth*_this.imgsCount})
+            _this.pageIndex = _this.imgsCount - 1
+          }
+          _this.setBgcolor()
+          _this.isAnimate = false
+        })
+      },
+
+      setBgcolor: function(){
+        this.$bullets.removeClass('active').eq(this.pageIndex).addClass('active')
+      }
+    }
+
+    var carousel = new Carousel($('.carousel').eq(0))
+    var carousel = new Carousel($('.carousel').eq(1))
+  </script>
+</body>
+</html>
