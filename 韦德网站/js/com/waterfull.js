@@ -39,6 +39,7 @@ define(['jquery'], function($){
 				}
 			});
 		}
+
 		//后台数据拼接成dom节点
 		function getNode(item){
 			var html = ''
