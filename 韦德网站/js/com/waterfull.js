@@ -22,6 +22,7 @@ define(['jquery'], function($){
 		function getData(callback){
 			$.ajax({
 				url: 'https://platform.sina.com.cn/slide/album_tech',
+				type: 'get',
 				dataType: 'jsonp',
 				jsonp:"jsoncallback",
 				data: {
