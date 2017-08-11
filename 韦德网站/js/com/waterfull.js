@@ -21,7 +21,7 @@ define(['jquery'], function($){
 		//取得后台的数据
 		function getData(callback){
 			$.ajax({
-				url: 'https://platform.sina.com.cn/slide/album_tech?jsoncallback=func&app_key=1271687855&num=3&page=4',
+				url: 'https://platform.sina.com.cn/slide/album_tech',
 				dataType: 'jsonp',
 				jsonp:"jsoncallback",
 				data: {
