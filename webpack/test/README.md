@@ -7,8 +7,6 @@ webpack是近期最火的一款模块加载器兼打包工具，它能把各种�
 `npm init  //创建package.json文件` 
 `npm install --save-dev webpack `
 2.对js、css之类的整理下，以 commonJS 的形式来书写脚本。
-
-![项目文件夹](http://upload-images.jianshu.io/upload_images/6470442-df5b22ecd2c2db17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 其中的一个脚本文件示例
 ```
 	var $ = require('./jquery.min.js')    //require到对应的jQuery文件
