@@ -1,8 +1,0 @@
-require('../css/test.css')
-var $ = require('./jquery.min.js')
-var button1 = require('./button1.js')
-var button2 = require('./button2.js')
-var button3 = require('./button3.js')
-button1()
-button2()
-button3()
