@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    @keyframes rotating {
+      0%{
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+		.rotating{
+			height: 100px;
+			width: 100px;
+			border: 15px solid rgba(255,0,0,0.2);
+			border-radius: 50%;
+			border-top: 15px solid rgba(255,0,0,1);
+			animation: rotating 1s infinite linear;
+		}
+	</style>
+</head>
+<body>
+	<div class="rotating"></div>
+</body>
+</html>

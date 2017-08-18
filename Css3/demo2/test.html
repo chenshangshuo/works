@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+    @keyframes loading {
+      0%,
+      100% {
+        box-shadow: 0 0 blue;
+        height: 50px;
+      }
+      30% {
+        box-shadow: 0 -20px blue;
+        height: 60px;
+      }
+    }
+		.loading{
+			margin: 60px auto;
+			width: 15px;
+			height: 50px;
+			background-color: blue;
+			position: relative;
+			animation: loading 1s infinite;
+			animation-delay: 0.16s;
+		}
+		.loading:before,
+		.loading:after{
+			content: '';
+			display: block;
+			width: 15px;
+			height: 50px;
+			background-color: blue;
+			animation: loading 1s infinite;
+			position: absolute;
+		}
+		.loading:before{
+			left: -25px;
+		}
+		.loading:after{
+			animation-delay: 0.32s;
+			left: 25px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="loading"></div>
+</body>
+</html>
