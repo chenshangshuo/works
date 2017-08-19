@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D选择木马效果实现</title>
+	<style>
+		li{
+			list-style: none;
+		}
+		@keyframes rotate{
+			0% { transform:rotateY(0deg); }
+			12.5% { transform:rotateY(90deg) }
+			25% { transform:rotateY(180deg) }
+			37.5% { transform:rotateY(270deg) }
+			50% { transform:rotateY(360deg) }
+			62.5% { transform:rotateY(270deg) }
+			75% { transform:rotateY(180deg) }
+			87.5% { transform:rotateY(90deg) }
+			100% { transform:rotateY(0deg); }
+		}
+		.stage_area{
+			border: 1px solid red;
+			min-height: 500px;
+			margin: 20px auto;
+			perspective: 2800px;
+			position: relative;
+		}
+
+		.photo{
+			border: 1px solid red;
+			padding: 0;
+			width: 180px;
+			height: 300px;
+			animation: rotate 20s infinite;
+			position: absolute;
+			left: 50%;
+			margin-left: -90px;
+			transform-style: preserve-3d;
+		}
+
+		img{
+			width: 180px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		img:nth-child(1 ) { transform: rotateY( 0deg ) translateZ(385px) ; }
+		img:nth-child(2) { transform: rotateY( 60deg ) translateZ(385px) ; }
+		img:nth-child(3) { transform: rotateY( 120deg ) translateZ(385px); }
+		img:nth-child(4) { transform: rotateY( 180deg ) translateZ(385px); }
+		img:nth-child(5) { transform: rotateY( 240deg ) translateZ(385px); }
+		img:nth-child(6) { transform: rotateY( 300deg )  translateZ(385px); }
+	</style>
+</head>
+<body>
+  	<div class="stage_area">
+	    <div class="photo">
+        <img src="imgs/zan.jpg" alt="图片">
+        <img src="imgs/an.jpg" alt="图片">
+        <img src="imgs/boshi.jpg" alt="图片">
+        <img src="imgs/kobe.jpg" alt="图片">
+        <img src="imgs/cp3.jpg" alt="图片">
+        <img src="imgs/cha.jpg" alt="图片">
+      </div>
+  	</div>
+</body>
+</html>
