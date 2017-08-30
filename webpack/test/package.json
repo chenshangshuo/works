@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^0.28.4",
+    "css-loader": "^0.28.5",
+    "emojis-list": "^2.1.0",
+    "json5": "^0.5.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4"
   }
