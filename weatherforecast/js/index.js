@@ -1,6 +1,6 @@
 
 (function(){
-	var HOST = 'https://jirenguapi.applinzi.com'
+	var HOST = 'https://weixin.jirengu.com/weather'
 //获取当地时间
 	function getTime(){
 		time = ''
