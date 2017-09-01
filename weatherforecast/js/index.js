@@ -1,6 +1,6 @@
 
 (function(){
-	var HOST = 'http://weixin.jirengu.com'
+	var HOST = 'https://weixin.jirengu.com'
 //获取当地时间
 	function getTime(){
 		time = ''
