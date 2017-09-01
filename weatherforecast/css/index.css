@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, 'Nova Flat', cursive,Helvetica;
+}
+ul,li{
+	list-style: none;
+}
+#header{
+	padding: 20px;
+	margin: 50px auto 0 auto;
+	height: 300px;
+	width: 700px;
+	background: url('../imgs/img.jpg')  center center no-repeat;
+	border-radius: 5px 5px 0 0;
+	background-size: cover;
+}
+#header>input{
+	display: inline-block;
+	height: 30px;
+	opacity: 0.3;
+	border-radius: 5px;
+}
+#header>.local-info{
+	color: #fff;
+	margin-top: 10px;
+	padding: 10px;
+	float: right;
+}
+#header>.local-info>.location{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+#footer{
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	padding: 10px 20px;
+	width: 700px;
+	background-color: rgba(205,205,205,0.2);
+	border-radius: 0 0 5px 5px;
+}
+.today{
+	margin-right: 20px;
+	display: flex;
+	align-items:center;
+}
+.today>.t-temp{
+	text-align: center;
+	margin-right: 10px;
+}
+.today>.t-temp>p:nth-child(1){
+	margin-bottom: 8px;
+	font-size: 38px;
+}
+.today>.t-wind{
+	text-align: center;
+}
+.future{
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+.f-center{
+	text-align: center;
+}
+.f-center>p{
+	margin-bottom: 5px;
+}
+.f-center .t-temp{
+	font-size: 14px;
+}
+.f-center>img{
+	width: 40px;
+	height: 40px;
+}
+.t-wind>img{
+	width: 80px;
+	height: 70px;
+}
