@@ -3,6 +3,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: Helvetica,sans-serif;
+	text-decoration: none;
 }
 *::before,*::after{
 	box-sizing: border-box;
@@ -15,6 +17,17 @@
 		transform: rotate(360deg)
 	}
 }
+.page:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #333;
+    opacity: 0.7;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
 .page{
 	height: 100vh;
 	background: transparent url('http://p4.music.126.net/qDYv60HMHIZIljqXfCAV9Q==/4410141139025189.jpg') center center no-repeat;
@@ -25,6 +38,7 @@
 }
 .page .disc-container{
 	position: relative;
+	z-index: 1;
 }
 .page .pointer{
 	position: absolute;
@@ -37,17 +51,89 @@
 	justify-content: center;
 	margin-top: 16vw;
 }
+.disc .svg{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 99;
+}
+.disc svg{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+	fill: #fff;
+	background-color: rgba(0,0,0,0.6);
+}
+.disc>.svg>.iconStart{
+	display: none;
+}
+.disc.playing>.svg>.iconStart{
+	display: block;
+}
+.disc.playing>.svg>.iconPause{
+	display: none;
+}
+
 .disc .ring{
 	width: 72vw;
 }
 .disc .light{
 	width: 72vw;
 	position: absolute;
-	animation: circle 20s infinite linear;
 }
+
 .disc .image{
 	width: 44.5vw;
 	border-radius: 50%;
 	position: absolute;
+}
+.disc.playing .light,
+.disc.playing .image{
 	animation: circle 20s infinite linear;
 }
+.page .song{
+	margin-top: 4vw;
+	color: #AEABAC;
+	position: relative;
+	z-index: 1;
+	flex: 1;
+}
+.page .lyricShow{
+	height: 84px;
+	overflow: hidden;
+}
+// .page .lyric{
+// 	transform: translateY(3px)
+// }
+.page h3{
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 1vw;
+}
+.page p{
+	font-size: 14px;
+	line-height: 28px;
+}
+.page>.link{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 1.5vw;
+}
+.page .link>a{
+	width: 38.5vw;
+	margin: 1em;
+	text-align: center;
+	border: 1px solid #D43B32;
+	border-radius: 1.5vw;
+	padding: 2vw;
+	color: #D43B32;
+}
+.page .link>a.main{
+	background: #D43B32;
+	color: #fff;
+}
+
