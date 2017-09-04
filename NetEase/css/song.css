@@ -30,7 +30,7 @@
 }
 .page{
 	height: 100vh;
-	background: transparent url('http://p4.music.126.net/qDYv60HMHIZIljqXfCAV9Q==/4410141139025189.jpg') center center no-repeat;
+	background: transparent url('//p4.music.126.net/qDYv60HMHIZIljqXfCAV9Q==/4410141139025189.jpg') center center no-repeat;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -65,14 +65,14 @@
 	fill: #fff;
 	background-color: rgba(0,0,0,0.6);
 }
-.disc>.svg>.iconStart{
+.disc>.svg>.iconPause{
 	display: none;
 }
 .disc.playing>.svg>.iconStart{
-	display: block;
+	display: none;
 }
 .disc.playing>.svg>.iconPause{
-	display: none;
+	display: block;
 }
 
 .disc .ring{
@@ -88,9 +88,14 @@
 	border-radius: 50%;
 	position: absolute;
 }
+.disc .light,
+.disc .image{
+	animation: circle 20s infinite linear;
+	animation-play-state: paused;
+}
 .disc.playing .light,
 .disc.playing .image{
-	animation: circle 20s infinite linear;
+	animation-play-state: running;
 }
 .page .song{
 	margin-top: 4vw;
