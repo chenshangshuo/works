@@ -30,7 +30,7 @@
 }
 .page{
 	height: 100vh;
-	background: transparent url('//p4.music.126.net/qDYv60HMHIZIljqXfCAV9Q==/4410141139025189.jpg') center center no-repeat;
+	background: transparent url('//p1.music.126.net/FtFNGCMA7QJePX5n2pEEDA==/109951163006321799.webp?imageView&thumbnail=246x0&quality=75&tostatic=0&type=webp') center center no-repeat;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -108,9 +108,12 @@
 	height: 84px;
 	overflow: hidden;
 }
-// .page .lyric{
-// 	transform: translateY(3px)
-// }
+.page .lyric{
+	transition: transform 0.3s;
+}
+.page .lyric>p.active{
+	color: #fff;
+}
 .page h3{
 	color: #fff;
 	font-size: 18px;

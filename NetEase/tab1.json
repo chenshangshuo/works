@@ -1,5 +1,6 @@
 [	{
 	"id":0,
+	"order":1,
 	"url":"http://orztvqno4.bkt.clouddn.com/b1c4%252Fb5de%252F74d0%252F9158ae4873e10b743790320db9ef9b29.mp3",
 	"name":"海阔天空",
 	"singer":"Beyond",
@@ -7,6 +8,7 @@
 	},
 	{
 	"id":1,
+	"order":2,
 	"url":"http://orztvqno4.bkt.clouddn.com/ebce%252F1ebf%252Fb534%252F718569c38a5c29c82715a3857f282fab%20%281%29.mp3",
 	"name":"磁带版A面末的口白",
 	"singer":"李宗盛",
@@ -14,6 +16,7 @@
 	},
 	{
 	"id":2,
+	"order":3,
 	"url":"http://orztvqno4.bkt.clouddn.com/3ce2%252F46bc%252F45cf%252F7af198d894878f6ea91644aaefb38ebb.mp3",
 	"name":"你好",
 	"singer":"初音",
@@ -21,6 +24,7 @@
 	},
 	{
 	"id":3,
+	"order":4,
 	"url":"http://orztvqno4.bkt.clouddn.com/019b%252Fca12%252F5972%252Feffa66da2bc18f2fadcf45635ceba496.mp3",
 	"name":"神",
 	"singer":"陈冠希",
@@ -28,6 +32,7 @@
 	},
 	{
 	"id":4,
+	"order":5,
 	"url":"http://orztvqno4.bkt.clouddn.com/387a%252F06c6%252Fb77f%252F4cd0ec711b580a463d8b683efa60e483.mp3",
 	"name":"歌谣",
 	"singer": "李荣浩",
@@ -35,6 +40,7 @@
 	},
 	{
 	"id":5,
+	"order":6,
 	"url":"http://orztvqno4.bkt.clouddn.com/5b84%252Fa73a%252F1731%252F4d668481e692c54a86bf1e05774d1e67.mp3",
 	"name":"上火星球",
 	"singer": "徐良",
