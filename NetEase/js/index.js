@@ -1,7 +1,7 @@
 (function(){
 	const $lastest = $('.latest>.lastestSongs')
 	const $loading = $('.latest>.loading')
-	$.get('../song.json').then(function(responese){
+	$.get('./song.json').then(function(responese){
 		let songArr = responese
 		songArr.forEach(function(song){
 			//生成jq对象
