@@ -1,4 +1,4 @@
-// (function(){
+(function(){
 	const $lyric = $('.song .lyric')
 	const	$audio = $('<audio></audio>')
 	const $disc = $('.page .disc')
@@ -7,7 +7,7 @@
 	const $song = $('.song>h3')
 	//解析url，获得id
 	let id = parseInt(location.search.match(/\bid=(\d*)/)[1])
-	$.get('https://orztvqno4.bkt.clouddn.com/song.json').then(function(response){
+	$.get('../song.json').then(function(response){
 		let songs = response
 		let song = songs.filter(function(s){
 			if (s.id === id) {
