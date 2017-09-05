@@ -5,7 +5,7 @@
 		let songArr = responese
 		songArr.forEach(function(song){
 			//生成jq对象
-			let $newSong = $(`<li><a href="./song.html?id=${song.id}"><h3>${song.name}</h3><svg class="latestStart" aria-hidden="true"><use xlink:href="#icon-icon2"></use></svg><p><svg class="latestSq" aria-hidden="true"><use xlink:href="#icon-SQ"></use></svg>${song.singer}</p></a></li>`)
+			let $newSong = $(`<li><a href=./song.html?id=${song.id}"><h3>${song.name}</h3><svg class="latestStart" aria-hidden="true"><use xlink:href="#icon-icon2"></use></svg><p><svg class="latestSq" aria-hidden="true"><use xlink:href="#icon-SQ"></use></svg>${song.singer}</p></a></li>`)
 			$lastest.append($newSong)
 		})
 	})
@@ -26,10 +26,10 @@
 			return
 		}
 		if (index === 1) {
-			$.get('../tab1.json').then(function(responese){
+			$.get('./tab1.json').then(function(responese){
 				let hotSongArr = responese
 				hotSongArr.forEach(function(song){
-					let $hotSong = $(`<li><a href="./song.html?id=${song.id}"><span>${song.order}</span><h3>${song.name}</h3>
+					let $hotSong = $(`<li><a href=./song.html?id=${song.id}"><span>${song.order}</span><h3>${song.name}</h3>
 						<svg class="latestStart" aria-hidden="true"><use xlink:href="#icon-icon2"></use></svg>
 						<p><svg class="latestSq" aria-hidden="true"><use xlink:href="#icon-SQ"></use></svg>${song.singer}</p></a></li>`)
 					$('.hotSongLists').append($hotSong)
@@ -38,10 +38,10 @@
 							console.log(1)
 			})
 		}else if (index === 2) {
-			$.get('../tab1.json').then(function(res){
+			$.get('./tab1.json').then(function(res){
 				let searchArr = res
 				searchArr.forEach(function(song){
-					let $hotSong = $(`<li><a href="./song.html?id=${song.id}"><span>${song.name}</span></li>`)
+					let $hotSong = $(`<li><a href=./song.html?id=${song.id}"><span>${song.name}</span></li>`)
 					$('.hotLists').append($hotSong)
 				})
 				$li.attr('data-downloaded', 'yes')
@@ -65,7 +65,7 @@
 				if (result.length !== 0) {
 					let name = result.map((r) => r.name)
 					let id = result.map((r) => r.id)
-					$('.opt').html(`<p><a href="./song.html?id=${id}">${name}</a></p>`)
+					$('.opt').html(`<p><a href=./song.html?id=${id}">${name}</a></p>`)
 				}else{
 					$('.opt').text('没有结果')
 				}
