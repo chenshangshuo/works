@@ -30,7 +30,7 @@
 }
 .page{
 	height: 100vh;
-	background: transparent url('//orztvqno4.bkt.clouddn.com/7.webp') center center no-repeat;
+	background: transparent url('http://orztvqno4.bkt.clouddn.com/7.webp') center center no-repeat;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
