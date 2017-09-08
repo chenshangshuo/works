@@ -35,7 +35,6 @@ ul, ol { list-style: none; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-
 /** 重置表单元素 **/
 legend { color: #000; } /* for ie6 */
 fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
