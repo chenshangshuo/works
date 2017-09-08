@@ -49,9 +49,11 @@
 .page .disc{
 	display: flex;
 	align-items: center;
+	text-align: center;
 	justify-content: center;
 	margin-top: 16vw;
 	position: relative;
+	border: 1px solid green;
 }
 .disc .svg{
 	position: absolute;
@@ -81,8 +83,10 @@
 	width: 72vw;
 }
 .disc .light{
+	border: 1px solid red;
 	width: 72vw;
 	position: absolute;
+	top: 0;
 }
 
 .disc .image{
