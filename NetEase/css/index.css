@@ -238,6 +238,9 @@ footer .copyright{
   background-size: contain;
   background-position: -7vw -6vw;
 }
+.loading{
+	text-align: center;
+}
 .hotSong p{
 	font-size: 0.8em;
 	color: #fff;

@@ -1,6 +1,7 @@
 (function(){
 	const $lastest = $('.latest>.lastestSongs')
 	const $loading = $('.latest>.loading')
+	const $Tab1loading = $('.hotMusic .loading')
 	$.get('./song.json').then(function(responese){
 		let songArr = responese
 		songArr.forEach(function(song){
@@ -35,7 +36,7 @@
 					$('.hotSongLists').append($hotSong)
 				})
 				$li.attr('data-downloaded','yes')
-							console.log(1)
+				$Tab1loading.remove()
 			})
 		}else if (index === 2) {
 			$.get('./tab1.json').then(function(res){
@@ -93,6 +94,8 @@
 	}
 	//
 	$('.songLists').on('click','li',function(e){
+		$('.siteNav>li').eq(0).removeClass('active')
+		$('.siteNav>li').eq(1).addClass('active')
 		$('.content>li').eq(0).removeClass('active')
 		$('.content>li').eq(1).addClass('active')
 	})
