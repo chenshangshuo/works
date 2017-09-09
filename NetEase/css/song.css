@@ -36,20 +36,19 @@
 	flex-direction: column;
 	text-align: center;
 }
-.page .disc-container{
+.page .disc-container {
 	position: relative;
 	z-index: 1;
 }
-.page .pointer{
+.page .disc-container .pointer{
 	position: absolute;
 	width: 24vw;
 	left: 50%;
 	z-index: 100;
 }
-.page .disc{
+.page .disc-container .disc{
 	display: flex;
 	align-items: center;
-	text-align: center;
 	justify-content: center;
 	margin-top: 16vw;
 	position: relative;
@@ -81,21 +80,18 @@
 .disc .ring{
 	width: 72vw;
 }
-.disc .light{
+.disc>.light{
 	width: 72vw;
 	position: absolute;
 	top: 0;
 	left: 14vw;
 }
 
-.disc .image{
+.disc>.image{
 	width: 44.5vw;
 	border-radius: 50%;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -22.25vw;
-	margin-left: -22.25vw;
+	left: 28vw;
 }
 .disc .light,
 .disc .image{
