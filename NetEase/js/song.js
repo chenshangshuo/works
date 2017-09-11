@@ -35,7 +35,7 @@
 			$audio[0].play()
 			$disc.addClass('playing')
 	  })
-	  //将歌曲时间转变成这种形式：00:14.01
+	  //将歌曲时间转变成这种形式：00:14.01(audio的currentTime APi)
 	  setInterval(()=>{
 		  let minute = ~~($audio[0].currentTime/60)
 	  	let second = $audio[0].currentTime - minute*60
@@ -85,7 +85,6 @@
 			$lyric.append($p)
 		})
   }
-
 })()
 
 

@@ -92,7 +92,7 @@
 			},(Math.random()*1000 + 500))
 			})
 	}
-	//
+
 	$('.songLists').on('click','li',function(e){
 		$('.siteNav>li').eq(0).removeClass('active')
 		$('.siteNav>li').eq(1).addClass('active')
