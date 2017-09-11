@@ -79,9 +79,10 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2)
+
 var $ = __webpack_require__(0)
 var button1 = __webpack_require__(8)
-button1()
+
 
 
 
@@ -125,7 +126,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "#wrapper {\n  width: 500px;\n  height: 500px;\n  border: 1px solid red;\n}\n", ""]);
+exports.push([module.i, "* {\n  margin: 0 ;\n  padding: 0;\n  box-sizing: border-box;\n}\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, \"Nimbus Sans L\", Arial, \"Liberation Sans\", \"PingFang SC\", \"Hiragino Sans GB\", \"Source Han Sans CN\", \"Source Han Sans SC\", \"Microsoft YaHei\", \"Wenquanyi Micro Hei\", \"WenQuanYi Zen Hei\", \"ST Heiti\", SimHei, \"WenQuanYi Zen Hei Sharp\", sans-serif;\n  font-size: 18px;\n}\n.layout {\n  width: 1100px;\n  margin: 0 auto;\n}\n.clearfix:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n@keyframes move {\n  0% {\n    bottom: 70px;\n    opacity: 0.2;\n  }\n  20% {\n    bottom: 140px;\n    opacity: 0.8;\n  }\n  50% {\n    bottom: 140px;\n    opacity: 0.2;\n  }\n  80% {\n    bottom: 140px;\n    opacity: 0.8;\n  }\n  100% {\n    bottom: 70px;\n    opacity: 0.2;\n  }\n}\n@keyframes reversal {\n  0% {\n    transform: rotate(0deg);\n  }\n  50% {\n    transform: rotate(180deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nhtml,\nbody {\n  height: 100%;\n}\nheader {\n  text-align: center;\n  position: relative;\n  background: url('//orztvqno4.bkt.clouddn.com/img1.jpg') center center no-repeat;\n  background-size: cover;\n  height: 100%;\n}\nheader > nav {\n  display: none;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 99;\n  padding: 20px 40px;\n  background: #171c44;\n  opacity: 0.9;\n}\nheader > nav > .logoTop img {\n  float: left;\n  height: 30px;\n}\nheader > nav > .intro {\n  float: right;\n  display: flex;\n}\nheader > nav > .intro > li {\n  margin: 0 20px;\n}\nheader > nav > .intro > li > a {\n  color: #fff;\n}\nheader > #btn {\n  float: right;\n  margin: 30px 60px;\n  transition: 0.6s linear;\n}\nheader > #btn:hover {\n  animation: reversal 0.6s linear;\n}\nheader > #btn.hide {\n  display: none;\n}\nheader > #btn img {\n  width: 40px;\n}\nheader > .logoCenter {\n  text-align: center;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-top: -150px;\n  margin-left: -216px;\n}\nheader > .logoCenter > .firstH {\n  margin-top: 20px;\n}\nheader > .logoCenter > h1 {\n  font-size: 28px;\n  color: #7d8fbd;\n  font-weight: normal;\n}\nheader > .logoCenter > img {\n  width: 440px;\n  opacity: 0.9;\n}\nheader > .logoCenter > p {\n  color: #7d8fbd;\n  margin: 10px 0;\n}\nheader > #cover {\n  display: none;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 3;\n  background: url('//orztvqno4.bkt.clouddn.com/banner-big-bg.png') repeat;\n}\nheader > #cover > ul {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\nheader > #cover > ul > li {\n  margin: 10px 0;\n}\nheader > #cover > ul > li > a {\n  font-size: 38px;\n  text-align: center;\n  color: #a5b7e6;\n  font-weight: normal;\n  line-height: 72px;\n}\nheader > #cover > ul > li > a:hover {\n  color: #171c04;\n}\nheader > .pointer {\n  position: absolute;\n  left: 50%;\n  margin-left: -17.5px;\n  z-index: 3;\n  animation: move 6s infinite linear;\n  animation-delay: 0.2s;\n}\nheader > .pointer img {\n  width: 45px;\n}\nsection {\n  height: 1000px;\n}\n", ""]);
 
 // exports
 
@@ -681,10 +682,33 @@ module.exports = __webpack_amd_options__;
 
 	var $ = __webpack_require__(0)
 	module.exports = function(){
-		$('#click').on('click',function(){
-			$('#wrapper').css('background-color', 'red')
+		//导航栏淡入淡出，经过防抖处理
+		$window = $(window)
+		var timer
+		$window.on('scroll',function(){
+			if (timer) {
+				clearTimeout(timer)
+			}
+			timer = setTimeout(function(){
+				if ($window.scrollTop() != 0) {
+					$('nav').fadeIn(200)
+					$('#btn').fadeOut(200)
+				}else{
+					$('nav').fadeOut(200)
+					$('#btn').fadeIn(200)
+				}
+			},400)
 		})
-	}
+		//点击模态框事件发生，事件代理解决模态框消失
+		$('#btn').on('click',function(){
+			$('#cover').css('display', 'block')
+		})
+		$('#cover').on('click',function(e){
+			if (e.target.tagName.toLowerCase() != "li") {
+				$('#cover').css('display', 'none')
+			}
+		})
+	}()
 
 
 /***/ })

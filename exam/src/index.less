@@ -1,5 +1,189 @@
-		#wrapper{
-			width: 500px;
-			height: 500px;
-			border: 1px solid red;
+// css reset
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+ul,ol{
+  list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-size: 18px;
+}
+
+//通用样式设置
+.layout{
+	width: 1100px;
+	margin: 0 auto;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+//通用样式的关键帧
+@keyframes move{
+	0%{
+  	bottom: 70px;
+  	opacity: 0.2;
+	}
+	20%{
+  	bottom: 140px;
+  	opacity: 0.8;
+	}
+	50%{
+  	bottom: 140px;
+  	opacity: 0.2;
+	}
+	80%{
+		bottom: 140px;
+  	opacity: 0.8;
+	}
+	100%{
+	  bottom: 70px;
+  	opacity: 0.2;
+	}
+}
+
+@keyframes reversal{
+	0%{
+  	transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(180deg)
+	}
+	100%{
+		transform:rotate(360deg)
+	}
+}
+
+
+//首页顶部样式部分
+html,body{
+	height: 100%;
+}
+
+header{
+	text-align: center;
+	position: relative;
+	background: url('//orztvqno4.bkt.clouddn.com/img1.jpg') center center no-repeat;
+	background-size: cover;
+	height: 100%;
+	>nav{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 99;
+	  padding: 20px 40px;
+	  background: #171c44;
+	  opacity: 0.9;
+		>.logoTop{
+		 img{
+		 	float: left;
+		 	height: 30px;
+		 }
 		}
+		>.intro{
+			float: right;
+			display: flex;
+			>li{
+				margin: 0 20px;
+				>a{
+					color: #fff;
+				}
+			}
+		}
+	}
+	>#btn{
+		float: right;
+		margin: 30px 60px;
+		transition: 0.6s linear;
+		&:hover{
+	    animation: reversal 0.6s linear;
+		}
+		&.hide{
+			display: none;
+		}
+		img{
+			width: 40px;
+		}
+	}
+	>.logoCenter{
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -150px;
+		margin-left: -216px;
+		>.firstH{
+			margin-top: 20px;
+		}
+		>h1{
+	    font-size: 28px;
+	    color: #7d8fbd;
+	    font-weight: normal;
+		}
+		>img{
+			width: 440px;
+			opacity: 0.9;
+		}
+		>p{
+			color: #7d8fbd;
+			margin: 10px 0;
+		}
+	}
+	>#cover{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 3;
+		background: url('//orztvqno4.bkt.clouddn.com/banner-big-bg.png') repeat;
+		>ul{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			>li{
+				margin: 10px 0;
+				>a{
+		    font-size: 38px;
+		    text-align: center;
+		    color: #a5b7e6;
+		    font-weight: normal;
+		    line-height: 72px;
+				&:hover{
+					color: #171c04;
+				}
+				}
+			}
+		}
+	}
+	>.pointer{
+		position: absolute;
+		left: 50%;
+		margin-left: -17.5px;
+		z-index: 3;
+    animation: move 6s infinite linear;
+    animation-delay: 0.2s;
+    img{
+			width: 45px;
+    }
+	}
+}
+
+section{
+	height: 1000px;
+}
