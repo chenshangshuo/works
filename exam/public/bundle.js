@@ -79,9 +79,11 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2)
-
 var $ = __webpack_require__(0)
-var button1 = __webpack_require__(8)
+var homePage = __webpack_require__(8)
+var iconSwitch = __webpack_require__(9)
+var carousel = __webpack_require__(10)
+var date = __webpack_require__(11)
 
 
 
@@ -126,7 +128,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  margin: 0 ;\n  padding: 0;\n  box-sizing: border-box;\n}\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, \"Nimbus Sans L\", Arial, \"Liberation Sans\", \"PingFang SC\", \"Hiragino Sans GB\", \"Source Han Sans CN\", \"Source Han Sans SC\", \"Microsoft YaHei\", \"Wenquanyi Micro Hei\", \"WenQuanYi Zen Hei\", \"ST Heiti\", SimHei, \"WenQuanYi Zen Hei Sharp\", sans-serif;\n  font-size: 18px;\n}\n.layout {\n  width: 1100px;\n  margin: 0 auto;\n}\n.clearfix:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n@keyframes move {\n  0% {\n    bottom: 70px;\n    opacity: 0.2;\n  }\n  20% {\n    bottom: 140px;\n    opacity: 0.8;\n  }\n  50% {\n    bottom: 140px;\n    opacity: 0.2;\n  }\n  80% {\n    bottom: 140px;\n    opacity: 0.8;\n  }\n  100% {\n    bottom: 70px;\n    opacity: 0.2;\n  }\n}\n@keyframes reversal {\n  0% {\n    transform: rotate(0deg);\n  }\n  50% {\n    transform: rotate(180deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\nhtml,\nbody {\n  height: 100%;\n}\nheader {\n  text-align: center;\n  position: relative;\n  background: url('//orztvqno4.bkt.clouddn.com/img1.jpg') center center no-repeat;\n  background-size: cover;\n  height: 100%;\n}\nheader > nav {\n  display: none;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 99;\n  padding: 20px 40px;\n  background: #171c44;\n  opacity: 0.9;\n}\nheader > nav > .logoTop img {\n  float: left;\n  height: 30px;\n}\nheader > nav > .intro {\n  float: right;\n  display: flex;\n}\nheader > nav > .intro > li {\n  margin: 0 20px;\n}\nheader > nav > .intro > li > a {\n  color: #fff;\n}\nheader > #btn {\n  float: right;\n  margin: 30px 60px;\n  transition: 0.6s linear;\n}\nheader > #btn:hover {\n  animation: reversal 0.6s linear;\n}\nheader > #btn.hide {\n  display: none;\n}\nheader > #btn img {\n  width: 40px;\n}\nheader > .logoCenter {\n  text-align: center;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-top: -150px;\n  margin-left: -216px;\n}\nheader > .logoCenter > .firstH {\n  margin-top: 20px;\n}\nheader > .logoCenter > h1 {\n  font-size: 28px;\n  color: #7d8fbd;\n  font-weight: normal;\n}\nheader > .logoCenter > img {\n  width: 440px;\n  opacity: 0.9;\n}\nheader > .logoCenter > p {\n  color: #7d8fbd;\n  margin: 10px 0;\n}\nheader > #cover {\n  display: none;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 3;\n  background: url('//orztvqno4.bkt.clouddn.com/banner-big-bg.png') repeat;\n}\nheader > #cover > ul {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\nheader > #cover > ul > li {\n  margin: 10px 0;\n}\nheader > #cover > ul > li > a {\n  font-size: 38px;\n  text-align: center;\n  color: #a5b7e6;\n  font-weight: normal;\n  line-height: 72px;\n}\nheader > #cover > ul > li > a:hover {\n  color: #171c04;\n}\nheader > .pointer {\n  position: absolute;\n  left: 50%;\n  margin-left: -17.5px;\n  z-index: 3;\n  animation: move 6s infinite linear;\n  animation-delay: 0.2s;\n}\nheader > .pointer img {\n  width: 45px;\n}\nsection {\n  height: 1000px;\n}\n", ""]);
+exports.push([module.i, "* {\n  margin: 0 ;\n  padding: 0;\n  box-sizing: border-box;\n}\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nh1,\nh2,\nh3,\nh4,\nh5 {\n  font-weight: 500;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, \"Nimbus Sans L\", Arial, \"Liberation Sans\", \"PingFang SC\", \"Hiragino Sans GB\", \"Source Han Sans CN\", \"Source Han Sans SC\", \"Microsoft YaHei\", \"Wenquanyi Micro Hei\", \"WenQuanYi Zen Hei\", \"ST Heiti\", SimHei, \"WenQuanYi Zen Hei Sharp\", sans-serif;\n  font-size: 14px;\n}\n.layout {\n  width: 1100px;\n  margin: 0 auto;\n  text-align: center;\n}\n.clearfix:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n.icon {\n  margin-right: 10px;\n  width: 1.3em;\n  height: 1.3em;\n  vertical-align: -0.15em;\n  fill: black;\n  overflow: hidden;\n}\n@keyframes move {\n  0% {\n    bottom: 40px;\n    opacity: 0.2;\n  }\n  20% {\n    bottom: 80px;\n    opacity: 0.8;\n  }\n  50% {\n    bottom: 80px;\n    opacity: 0.2;\n  }\n  80% {\n    bottom: 80px;\n    opacity: 0.8;\n  }\n  100% {\n    bottom: 40px;\n    opacity: 0.2;\n  }\n}\n@keyframes reversal {\n  0% {\n    transform: rotate(0deg);\n  }\n  50% {\n    transform: rotate(180deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes scale {\n  0% {\n    transform: scale(1);\n  }\n  100% {\n    transform: scale(1.1);\n  }\n}\nhtml,\nbody {\n  height: 100%;\n}\nheader {\n  text-align: center;\n  position: relative;\n  background: url('//orztvqno4.bkt.clouddn.com/img1.jpg') center center no-repeat;\n  background-size: cover;\n  height: 100%;\n}\nheader > nav {\n  display: none;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  z-index: 99;\n  padding: 10px 40px;\n  background: #171c44;\n  opacity: 0.9;\n}\nheader > nav > .logoTop img {\n  float: left;\n  height: 30px;\n}\nheader > nav > .intro {\n  float: right;\n  display: flex;\n}\nheader > nav > .intro > li {\n  line-height: 30px;\n  margin: 0 20px;\n}\nheader > nav > .intro > li > a {\n  font-size: 14px;\n  color: #fff;\n}\nheader > #btn {\n  float: right;\n  margin: 30px 50px;\n  transition: 0.6s linear;\n}\nheader > #btn:hover {\n  animation: reversal 0.6s linear;\n}\nheader > #btn.hide {\n  display: none;\n}\nheader > #btn img {\n  width: 30px;\n}\nheader > .logoCenter {\n  text-align: center;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-top: -150px;\n  margin-left: -187.5px;\n}\nheader > .logoCenter > img {\n  position: relative;\n  top: -30px;\n  width: 375px;\n  opacity: 0.9;\n}\nheader > .logoCenter > .secondPart {\n  position: relative;\n  bottom: -20px;\n}\nheader > .logoCenter > .secondPart > .firstH {\n  margin-top: 20px;\n}\nheader > .logoCenter > .secondPart > h1 {\n  font-size: 26px;\n  color: #7d8fbd;\n  font-weight: normal;\n}\nheader > .logoCenter > .secondPart > p {\n  font-size: 14px;\n  color: #7d8fbd;\n  margin: 8px 0;\n}\nheader > #cover {\n  display: none;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 3;\n  background: url('//orztvqno4.bkt.clouddn.com/banner-big-bg.png') repeat;\n}\nheader > #cover > ul {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\nheader > #cover > ul > li > a {\n  font-size: 30px;\n  text-align: center;\n  color: #a5b7e6;\n  font-weight: normal;\n  line-height: 70px;\n}\nheader > #cover > ul > li > a:hover {\n  color: #171c04;\n}\nheader > .pointer {\n  position: absolute;\n  left: 50%;\n  margin-left: -17.5px;\n  z-index: 3;\n  animation: move 6s infinite linear;\n  animation-delay: 0.2s;\n}\nheader > .pointer img {\n  width: 35px;\n  cursor: pointer;\n}\nsection#service {\n  margin-top: 40px;\n}\nsection#service > h2 {\n  margin: 20px 0;\n  padding: 10px;\n  color: #171c44;\n  font-size: 28px;\n}\nsection#service > ul.solveIcon {\n  display: flex;\n  justify-content: space-around;\n  margin-bottom: 30px;\n}\nsection#service > ul.solveIcon > li > a {\n  display: block;\n  width: 155px;\n  height: 155px;\n}\nsection#service > ul.solveIcon > li > a:hover {\n  animation: 0.4s scale linear 1 forwards;\n}\nsection#service > ul.solveIcon > li h5 {\n  margin-top: 10px;\n  font-size: 16px;\n}\nsection#service > ul.solveIcon > li p {\n  color: #999;\n}\nsection#service > ul.solveIcon > li:nth-child(1) > a {\n  background: url('//orztvqno4.bkt.clouddn.com/service-icon1.png') no-repeat;\n  background-position: 0px -155px;\n}\nsection#service > ul.solveIcon > li:nth-child(2) > a {\n  background: url('//orztvqno4.bkt.clouddn.com/glasses-icon2.png') no-repeat;\n  background-position: 0px 0px;\n}\nsection#service > ul.solveIcon > li:nth-child(3) > a {\n  background: url('//orztvqno4.bkt.clouddn.com/courseware-icon3.png') no-repeat;\n  background-position: 0px 0px;\n}\nsection#service > ul.solveIcon > li:nth-child(4) > a {\n  background: url('//orztvqno4.bkt.clouddn.com/advisory-icon4.png') no-repeat;\n  background-position: 0px 0px;\n}\nsection#service > ul.solveIntro > li {\n  display: none;\n}\nsection#service > ul.solveIntro > li.show {\n  display: block;\n}\nsection#service > ul.solveIntro > li p {\n  margin: 10px;\n  color: #555;\n}\nsection#about {\n  padding-bottom: 20px;\n  background-color: #f6f6f6;\n}\nsection#about > .aboutCo {\n  margin-top: 40px;\n}\nsection#about > .aboutCo > h2 {\n  font-size: 28px;\n  padding-top: 40px;\n  margin-bottom: 10px;\n}\nsection#about > .aboutCo > p.dream {\n  color: #888;\n  font-size: 18px;\n  padding-bottom: 16px;\n}\nsection#about > .aboutCo > .article > .title {\n  padding-top: 10px;\n  font-size: 18px;\n  color: #171c44;\n  font-weight: bold;\n}\nsection#about > .aboutCo > .article > .intro {\n  padding: 8px 0;\n}\nsection#about > .aboutCo p {\n  font-size: 15px;\n  color: #2d3039;\n}\nsection#about > .carousel {\n  width: 700px;\n  height: 320px;\n  overflow: hidden;\n  margin: 20px auto;\n  position: relative;\n}\nsection#about > .carousel > .imgs {\n  position: absolute;\n  font-size: 0;\n}\nsection#about > .carousel > .imgs > li {\n  float: left;\n}\nsection#about > .carousel > .imgs > li img {\n  width: 700px;\n  height: 320px;\n}\nsection#about > .carousel > .arrow {\n  display: inline-block;\n  font-size: 30px;\n  line-height: 60px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  top: 50%;\n  margin-top: -30px;\n  z-index: 2;\n  width: 30px;\n  height: 60px;\n  background-color: #757575;\n  opacity: 0.1;\n}\nsection#about > .carousel > .arrow:hover {\n  opacity: 1;\n}\nsection#about > .carousel > .pre {\n  left: 0;\n}\nsection#about > .carousel > .next {\n  right: 0;\n}\nsection#about > .carousel > .bullets {\n  width: 150px;\n  position: absolute;\n  z-index: 2;\n  right: 10px;\n  bottom: 10px;\n}\nsection#about > .carousel > .bullets > li {\n  display: inline-block;\n  margin: 0 10px;\n  width: 8px;\n  height: 8px;\n  background-color: #757575;\n  border: 1px solid #757575;\n  border-radius: 50%;\n  cursor: pointer;\n}\nsection#about > .carousel > .bullets > li.active {\n  background-color: #fff;\n}\nsection#contact {\n  padding: 40px 0;\n}\nsection#contact .wrap {\n  margin: 20px 0;\n  display: flex;\n}\nsection#contact .wrap .task {\n  text-align: left;\n  max-width: 430px;\n}\nsection#contact .wrap .task > p {\n  color: #2d3039;\n  font-size: 15px;\n  margin: 10px 0;\n}\nsection#contact .wrap .task > p > span {\n  color: green;\n  display: inline-block;\n}\nsection#contact .wrap .aside {\n  max-width: 450px;\n  text-align: left;\n  margin-left: 200px;\n}\nsection#contact .wrap .aside > li {\n  margin: 10px 0;\n}\nsection#contact .wrap .aside > li > p {\n  font-size: 15px;\n}\nsection#contact .wrap .aside > li > a {\n  display: inline-block;\n  text-align: center;\n  line-height: 30px;\n  color: #D43C33;\n  border: 1px solid #ddd;\n  width: 120px;\n  height: 30px;\n  border-radius: 15px;\n  background-color: rgba(0, 0, 0, 0.1);\n}\n", ""]);
 
 // exports
 
@@ -681,6 +683,7 @@ module.exports = __webpack_amd_options__;
 /***/ (function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(0)
+	//首页JS部分
 	module.exports = function(){
 		//导航栏淡入淡出，经过防抖处理
 		$window = $(window)
@@ -708,6 +711,228 @@ module.exports = __webpack_amd_options__;
 				$('#cover').css('display', 'none')
 			}
 		})
+		//页面加载完成后，执行首屏动画
+		$window.on('load',() =>
+			$('.logoCenter img').animate({
+				top: 0
+			},1500)
+		)
+		$window.on('load',() =>
+			$('.logoCenter .secondPart').animate({
+				bottom: 0
+			},1500)
+		)
+		//点击按钮返回到对应的页面
+		$('.pointer>img').on('click',function(){
+			$('html,body').animate({scrollTop: $("#service").offset().top}, 1000)
+		})
+	}()
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(0)
+	module.exports = function(){
+		//产品服务图片切换功能
+		$a = $('.solveIcon>li>a')
+		$a.on('click', function(e){
+			e.preventDefault()
+			$(e.target).css('background-position', '0px -155px')
+			$(e.target).parent().siblings().find('a').css('background-position', '0px 0px')
+      var index = $(e.target).parent().index()
+      $('.solveIntro>li').eq(index).addClass('show').siblings().removeClass('show')
+		})
+	}()
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  var $ = __webpack_require__(0)
+
+  module.exports = function(){
+    function Carousel($ct){
+      this.$ct = $ct
+      this.init()
+      this.bind()
+    }
+    //2.选择对象，初始化，对应子类众多，可用find()查找
+    Carousel.prototype = {
+      init: function(){
+        var $pre = this.$pre = this.$ct.find('.pre')
+        var $next = this.$next = this.$ct.find('.next')
+        var $imgCt = this.$imgCt = this.$ct.find('.imgs')
+        var $imgs = this.$imgs = this.$ct.find('.imgs>li')
+        var $bullets = this.$bullets = this.$ct.find('.bullets>li')
+        this.pageIndex = 0   //记录当前页
+        this.isAnimate = false //状态锁
+        this.imgsCount = $imgs.length
+        this.imgWidth = $imgs.width()
+
+        $imgCt.append($imgs.first().clone())  //良好的轮播体验必须前后插入图片，利用CSS过渡下
+        $imgCt.prepend($imgs.last().clone())
+        $imgCt.css({'width': this.imgWidth*(this.imgsCount+2)})
+        $imgCt.css({'left': -this.imgWidth})
+      },
+    //绑定事件
+      bind: function(){
+        var _this = this
+        this.$next.click(function(e){
+          e.preventDefault()
+          _this.playNext(1)
+        })
+
+        this.$pre.click(function(e){
+          e.preventDefault()
+          _this.playPre(1)
+        })
+
+        this.$bullets.click(function(){
+          var index = $(this).index()
+          if (index > _this.pageIndex) {
+            _this.playNext(index - _this.pageIndex)
+          }else if (index < _this.pageIndex) {
+            _this.playPre(_this.pageIndex-index)
+          }
+        })
+
+        setInterval(function(){_this.playNext(1)}, 4000)
+      },
+
+      playNext: function(len){
+        var _this = this
+        if (this.isAnimate) return
+        this.isAnimate = true
+        this.$imgCt.animate({
+          'left': '-=' + this.imgWidth*len
+        },function(){
+          _this.pageIndex += len
+          if (_this.pageIndex === _this.imgsCount) {
+            _this.$imgCt.css({'left': -_this.imgWidth})
+            _this.pageIndex = 0
+          }
+          _this.setBgcolor()
+          _this.isAnimate = false
+        })
+      },
+
+      playPre: function(len){
+        var _this = this
+        if (this.isAnimate) return
+        this.isAnimate = true
+        this.$imgCt.animate({
+          'left': '+=' + this.imgWidth*len
+        },function(){
+          _this.pageIndex -= len
+          if (_this.pageIndex === -1) {
+            _this.$imgCt.css({'left': -_this.imgWidth*_this.imgsCount})
+            _this.pageIndex = _this.imgsCount - 1
+          }
+          _this.setBgcolor()
+          _this.isAnimate = false
+        })
+      },
+      setBgcolor: function(){
+        this.$bullets.removeClass('active').eq(this.pageIndex).addClass('active')
+      }
+    }
+    var carousel = new Carousel($('#about>.carousel'))
+  }()
+
+
+
+
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(0)
+
+	module.exports = function (){
+
+		//存活于这星球时间
+		function liveTime(){
+			var lvTime = ''
+			function getInfor(datestr){
+				var targetDate = new Date (datestr).getTime()
+				var curDate = new Date().getTime()
+				var offset =Math.abs(targetDate-curDate)
+				var totalSeconds = Math.floor(offset/1000)
+				var seconds = totalSeconds%60
+				var totalMinutes = Math.floor(totalSeconds/60)
+				var minutes = totalMinutes%60
+				var totalHours = Math.floor(totalMinutes/60)
+				var hours = totalHours%24
+				var totalDays = Math.floor(totalHours/24)
+				var days = totalDays%30
+				var totalmonth = Math.floor(totalDays/30.5)
+				var month = totalmonth%12
+				var years = Math.floor(totalmonth/12)
+				return lvTime = (years + '年' + month + '月' + days + '天' +hours+'小时'+minutes+'分钟'+seconds+'秒')
+			}
+			getInfor('1992-11-06T20:48:20')
+			$('#contact .live>span').text(lvTime)
+			setTimeout(liveTime,1000)
+		}
+
+
+		// 工作时间计算
+		function workTime(){
+			var wkTime = ''
+			function getInfor(datestr){
+				var targetDate = new Date (datestr).getTime()
+				var curDate = new Date().getTime()
+				var offset =Math.abs(targetDate-curDate)
+				var totalSeconds = Math.floor(offset/1000)
+				var seconds = totalSeconds%60
+				var totalMinutes = Math.floor(totalSeconds/60)
+				var minutes = totalMinutes%60
+				var totalHours = Math.floor(totalMinutes/60)
+				var hours = totalHours%24
+				var totalDays = Math.floor(totalHours/24)
+				var days = totalDays%30
+				var totalmonth = Math.floor(totalDays/30.5)
+				var month = totalmonth%12
+				var years = Math.floor(totalmonth/12)
+				return wkTime = (years + '年' + month + '月' + days + '天' +hours+'小时'+minutes+'分钟'+seconds+'秒')
+			}
+			getInfor('2015-07-06T08:30:25')
+			$('#contact .work>span').text(wkTime)
+			setTimeout(workTime,1000)
+		}
+
+		//学习时间计算
+		function studyTime(){
+			var sdTime = ''
+			function getInfor(datestr){
+				var targetDate = new Date (datestr).getTime()
+				var curDate = new Date().getTime()
+				var offset =Math.abs(targetDate-curDate)
+				var totalSeconds = Math.floor(offset/1000)
+				var seconds = totalSeconds%60
+				var totalMinutes = Math.floor(totalSeconds/60)
+				var minutes = totalMinutes%60
+				var totalHours = Math.floor(totalMinutes/60)
+				var hours = totalHours%24
+				var totalDays = Math.floor(totalHours/24)
+				var days = totalDays%30
+				var totalmonth = Math.floor(totalDays/30.5)
+				var month = totalmonth%12
+				var years = Math.floor(totalmonth/12)
+				return sdTime = (month + '月' + days + '天' +hours+'小时'+minutes+'分钟'+seconds+'秒')
+			}
+			getInfor('2017-04')
+			$('#contact .study>span').text(sdTime)
+			setTimeout(studyTime,1000)
+		}
+		liveTime()
+		workTime()
+		studyTime()
 	}()
 
 

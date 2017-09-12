@@ -8,6 +8,9 @@
 *::after{
   box-sizing: border-box;
 }
+h1,h2,h3,h4,h5{
+  font-weight: 500;
+}
 ul,ol{
   list-style: none;
 }
@@ -16,39 +19,47 @@ a{
 }
 body{
   font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 //通用样式设置
 .layout{
 	width: 1100px;
 	margin: 0 auto;
+	text-align: center;
 }
 .clearfix:after{
 	content: '';
 	display: block;
 	clear: both;
 }
+.icon {
+	 margin-right: 10px;
+   width: 1.3em; height: 1.3em;
+   vertical-align: -0.15em;
+   fill: black;
+   overflow: hidden;
+}
 //通用样式的关键帧
 @keyframes move{
 	0%{
-  	bottom: 70px;
+  	bottom: 40px;
   	opacity: 0.2;
 	}
 	20%{
-  	bottom: 140px;
+  	bottom: 80px;
   	opacity: 0.8;
 	}
 	50%{
-  	bottom: 140px;
+  	bottom: 80px;
   	opacity: 0.2;
 	}
 	80%{
-		bottom: 140px;
+		bottom: 80px;
   	opacity: 0.8;
 	}
 	100%{
-	  bottom: 70px;
+	  bottom: 40px;
   	opacity: 0.2;
 	}
 }
@@ -64,7 +75,14 @@ body{
 		transform:rotate(360deg)
 	}
 }
-
+@keyframes scale{
+	0%{
+  	transform: scale(1);
+	}
+	100%{
+  	transform: scale(1.1);
+	}
+}
 
 //首页顶部样式部分
 html,body{
@@ -84,7 +102,7 @@ header{
 		left: 0;
 		right: 0;
 		z-index: 99;
-	  padding: 20px 40px;
+	  padding: 10px 40px;
 	  background: #171c44;
 	  opacity: 0.9;
 		>.logoTop{
@@ -97,8 +115,10 @@ header{
 			float: right;
 			display: flex;
 			>li{
+				line-height: 30px;
 				margin: 0 20px;
 				>a{
+					font-size: 14px;
 					color: #fff;
 				}
 			}
@@ -106,7 +126,7 @@ header{
 	}
 	>#btn{
 		float: right;
-		margin: 30px 60px;
+		margin: 30px 50px;
 		transition: 0.6s linear;
 		&:hover{
 	    animation: reversal 0.6s linear;
@@ -115,7 +135,7 @@ header{
 			display: none;
 		}
 		img{
-			width: 40px;
+			width: 30px;
 		}
 	}
 	>.logoCenter{
@@ -124,22 +144,30 @@ header{
 		top: 50%;
 		left: 50%;
 		margin-top: -150px;
-		margin-left: -216px;
-		>.firstH{
-			margin-top: 20px;
-		}
-		>h1{
-	    font-size: 28px;
-	    color: #7d8fbd;
-	    font-weight: normal;
-		}
+		margin-left: -187.5px;
 		>img{
-			width: 440px;
+			position: relative;
+			top: -30px;
+			width: 375px;
 			opacity: 0.9;
 		}
-		>p{
-			color: #7d8fbd;
-			margin: 10px 0;
+		>.secondPart{
+			position: relative;
+			bottom: -20px;
+			>.firstH{
+				margin-top: 20px;
+			}
+			>h1{
+		    font-size: 26px;
+		    color: #7d8fbd;
+		    font-weight: normal;
+			}
+
+			>p{
+				font-size: 14px;
+				color: #7d8fbd;
+				margin: 8px 0;
+			}
 		}
 	}
 	>#cover{
@@ -156,17 +184,14 @@ header{
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			>li{
-				margin: 10px 0;
-				>a{
-		    font-size: 38px;
+			>li>a{
+		    font-size: 30px;
 		    text-align: center;
 		    color: #a5b7e6;
 		    font-weight: normal;
-		    line-height: 72px;
+		    line-height: 70px;
 				&:hover{
 					color: #171c04;
-				}
 				}
 			}
 		}
@@ -179,11 +204,206 @@ header{
     animation: move 6s infinite linear;
     animation-delay: 0.2s;
     img{
-			width: 45px;
+			width: 35px;
+			cursor: pointer;
     }
 	}
 }
 
-section{
-	height: 1000px;
+section#service{
+	margin-top: 40px;
+	>h2{
+		margin: 20px 0;
+	  padding: 10px;
+	  color: #171c44;
+    font-size: 28px;
+	  }
+  >ul.solveIcon{
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 30px;
+		>li{
+			>a{
+				display: block;
+				width: 155px;
+				height: 155px;
+			&:hover{
+				animation: 0.4s scale linear 1 forwards;
+			}
+			}
+			h5{
+				margin-top: 10px;
+				font-size: 16px;
+			}
+			p{
+		    color: #999;
+			}
+		}
+		>li:nth-child(1)>a{
+			background: url('//orztvqno4.bkt.clouddn.com/service-icon1.png') no-repeat;
+			background-position: 0px -155px;
+		}
+		>li:nth-child(2)>a{
+			background: url('//orztvqno4.bkt.clouddn.com/glasses-icon2.png') no-repeat;
+			background-position: 0px 0px;
+		}
+		>li:nth-child(3)>a{
+			background: url('//orztvqno4.bkt.clouddn.com/courseware-icon3.png') no-repeat;
+			background-position: 0px 0px;
+		}
+		>li:nth-child(4)>a{
+			background: url('//orztvqno4.bkt.clouddn.com/advisory-icon4.png') no-repeat;
+			background-position: 0px 0px;
+		}
+	}
+	>ul.solveIntro{
+		>li{
+			display: none;
+			&.show{
+				display: block;
+			}
+			p{
+				margin: 10px;
+				color: #555;
+			}
+		}
+	}
+}
+
+section#about{
+	padding-bottom: 20px;
+	background-color: #f6f6f6;
+	>.aboutCo{
+		margin-top: 40px;
+		>h2{
+	    font-size: 28px;
+			padding-top: 40px;
+			margin-bottom: 10px;
+		}
+		>p.dream{
+			color: #888;
+			font-size: 18px;
+			padding-bottom: 16px;
+		}
+		>.article{
+			>.title{
+				padding-top: 10px;
+		    font-size: 18px;
+		    color: #171c44;
+		    font-weight: bold;
+			}
+			>.intro{
+				padding: 8px 0;
+			}
+		}
+		p{
+			font-size: 15px;
+	    color: #2d3039
+		}
+	}
+	>.carousel{
+    width: 700px;
+    height: 320px;
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+    >.imgs{
+      position: absolute;
+      font-size: 0;
+      >li{
+	      float: left;
+	      img{
+		      width: 700px;
+		      height: 320px;
+	      }
+      }
+    }
+    >.arrow{
+      display: inline-block;
+      font-size: 30px;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      z-index: 2;
+      width: 30px;
+      height: 60px;
+      background-color: #757575;
+      opacity: 0.1;
+      &:hover{
+      	opacity: 1;
+      }
+    }
+    >.pre{
+    	left: 0;
+    }
+    >.next{
+    	right: 0;
+    }
+    >.bullets{
+      width: 150px;
+      position: absolute;
+      z-index: 2;
+      right: 10px;
+      bottom: 10px;
+      >li{
+	      display: inline-block;
+	      margin: 0 10px;
+	      width: 8px;
+	      height: 8px;
+	      background-color: #757575;
+	      border: 1px solid #757575;
+	      border-radius: 50%;
+	      cursor: pointer;
+      &.active{
+	      background-color: #fff;
+      }
+      }
+    }
+	}
+}
+
+section#contact{
+	padding: 40px 0;
+	.wrap{
+		margin: 20px 0;
+		display: flex;
+		.task{
+			text-align: left;
+			max-width: 430px;
+			>p{
+		    color: #2d3039;
+				font-size: 15px;
+		    margin: 10px 0;
+				>span{
+		    color: green;
+				display: inline-block;
+				}
+			}
+		}
+		.aside{
+			max-width: 450px;
+			text-align: left;
+			margin-left: 200px;
+			>li{
+				margin: 10px 0;
+				>p{
+				font-size: 15px;
+				}
+				>a{
+					display: inline-block;
+			    text-align: center;
+			    line-height: 30px;
+			    color: #D43C33;
+			    border: 1px solid #ddd;
+			    width: 120px;
+			    height: 30px;
+			    border-radius: 15px;
+			    background-color: rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
+	}
 }
