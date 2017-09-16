@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*::before,*::after{
+	box-sizing: border-box;
+}
+body{
+	background: #FFE600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.wrap{
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	>.nose{
+		width: 0;
+		height: 0;
+		border: 20px solid transparent;
+		border-top: 20px solid black;
+		border-radius: 50%;
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	>.eye{
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: #2e2e2e;
+		border: 2px solid black;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 50px;
+		&::after{
+				content: '';
+				display: block;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				background-color: white;
+				position: absolute;
+				left: 10px;
+				top: 5px;
+		}
+		&.leftEye{
+			margin-left: -170px;
+		}
+		&.rightEye{
+			margin-left: 170px;
+		}
+	}
+	>.upperLip{
+		height: 40px;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		top: 150px;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			height: 30px;
+			width: 120px;
+			border: 3px solid black;
+			left: 50%;
+			margin-left: -120px;
+			border-top: none;
+			border-right: none;
+			border-bottom-left-radius: 50px 30px;
+			transform: rotateZ(-20deg);
+			background-color: #FFE600;
+		}
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			height: 30px;
+			width: 120px;
+			border: 3px solid black;
+			left: 50%;
+			border-top: none;
+			border-left: none;
+			border-bottom-right-radius: 50px 30px;
+			transform: rotateZ(20deg);
+			background-color: #FFE600;
+		}
+	}
+	>.lowerLipWrapper{
+		height: 200px;
+		width: 100%;
+		position: absolute;
+		top: 157px;
+		overflow: hidden;
+		>.lowerLip{
+			width: 180px;
+			height: 800px;
+			border: 2px solid black;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			border-bottom-left-radius: 90px 400px;
+			border-bottom-right-radius: 90px 400px;
+			border-top-left-radius: 90px 150px;
+			border-top-right-radius: 90px 150px;
+			top: -600px;
+			background: #ff485f;
+	    box-shadow: inset 0 600px 0 20px #98000A;
+		}
+	}
+	>.face{
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		background-color: red;
+		border: 2px solid black;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 200px;
+		&.leftFace{
+			margin-left: -240px;
+		}
+		&.rightFace{
+			margin-left: 240px;
+		}
+	}
+
+}
